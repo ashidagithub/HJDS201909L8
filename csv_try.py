@@ -23,3 +23,9 @@ with open(filename, "w", encoding='utf8', newline='') as csvfile:
     for cnt in range(repeat_times):
         row_data = [cnt, '第1列数据', '第2列数据']  # data of a row
         writer.writerow(row_data)
+
+# Practice 2 - read
+with open(filename, "r", encoding='utf8') as csvfile:
+    reader = csv.reader(csvfile)
+    for line in reader:
+        print(line)
